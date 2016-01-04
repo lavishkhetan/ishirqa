@@ -1,7 +1,6 @@
 package appModule;
 
 import org.openqa.selenium.WebDriver;
-
 import pageObjects.Home1;
 
 public class Actions {
@@ -15,6 +14,9 @@ public class Actions {
 	  Home1.txt_webiste(driver).sendKeys("www.ishiqatest1.com");
 	  Home1.txt_Message(driver).sendKeys("Nothing");
 	  Home1.btn_submit(driver).click();
+	
+		
 	}
+
 	
 }
