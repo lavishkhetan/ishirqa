@@ -18,9 +18,11 @@ public class ClientsPage {
 	}
 	@Test
 	public void checkImage(){
+	JavascriptExecutor jse = (JavascriptExecutor)driver;
+	jse.executeScript("window.scrollBy(0,2000)", "");
 	WebElement image1 = driver.findElement(By.xpath(".//*[@id='owl-demo']/div/div/div[4]/div/img"));    
 
-	Boolean imageLoaded1 = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != "undefined" && arguments[0].naturalWidth > 0", image1); 
+	Boolean imageLoaded1 = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != undefined && arguments[0].naturalWidth > 0", "image1"); 
 	if (!imageLoaded1) 
 	{ 
 	System.out.println("1. Image is not present"); 
