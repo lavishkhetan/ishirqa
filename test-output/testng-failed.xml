@@ -12,7 +12,6 @@
         <methods>
           <include name="LaunchURL"/>
           <include name="logout"/>
-          <include name="checkImage"/>
         </methods>
       </class> <!-- testLogin.ClientsPage -->
     </classes>
