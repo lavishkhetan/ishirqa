@@ -2,6 +2,7 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
+<<<<<<< HEAD
   <suite name="Default suite" duration-ms="553962" started-at="2016-01-04T12:09:58Z" finished-at="2016-01-04T12:19:12Z">
     <groups>
     </groups>
@@ -24,6 +25,22 @@ Driver info: driver.version: FirefoxDriver
 	at org.openqa.selenium.firefox.FirefoxDriver.access$100(FirefoxDriver.java:65)
 	at org.openqa.selenium.firefox.FirefoxDriver$1$1.implicitlyWait(FirefoxDriver.java:244)
 	at testLogin.DownloadBtn.testsetup(DownloadBtn.java:24)
+=======
+  <suite name="Default suite" duration-ms="17436" started-at="2016-01-04T10:38:20Z" finished-at="2016-01-04T10:38:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17436" started-at="2016-01-04T10:38:20Z" finished-at="2016-01-04T10:38:37Z">
+      <class name="testLogin.CompanyPage">
+        <test-method status="PASS" signature="LaunchTheBeaseURL()[pri:0, instance:testLogin.CompanyPage@6a5fc7f7]" name="LaunchTheBeaseURL" is-config="true" duration-ms="17417" started-at="2016-01-04T16:08:20Z" finished-at="2016-01-04T16:08:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LaunchTheBeaseURL -->
+        <test-method status="FAIL" signature="ToolTip()[pri:0, instance:testLogin.CompanyPage@6a5fc7f7]" name="ToolTip" duration-ms="6" started-at="2016-01-04T16:08:37Z" finished-at="2016-01-04T16:08:37Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at testLogin.CompanyPage.ToolTip(CompanyPage.java:34)
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,6 +63,7 @@ Driver info: driver.version: FirefoxDriver
 	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+<<<<<<< HEAD
 Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7057 [/127.0.0.1] failed: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
 	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
@@ -76,17 +94,24 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 40 more
+=======
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
+<<<<<<< HEAD
         </test-method> <!-- testsetup -->
         <test-method status="SKIP" signature="Downloadbtn_Left()[pri:1, instance:testLogin.DownloadBtn@7f63425a]" name="Downloadbtn_Left" duration-ms="1" started-at="2016-01-04T17:49:12Z" finished-at="2016-01-04T17:49:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Downloadbtn_Left -->
       </class> <!-- testLogin.DownloadBtn -->
+=======
+        </test-method> <!-- ToolTip -->
+      </class> <!-- testLogin.CompanyPage -->
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

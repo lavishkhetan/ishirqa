@@ -15,7 +15,11 @@ public class DownloadBtn {
 	public WebDriverWait wait;
 	public WebDriver driver=null;
 	
+<<<<<<< HEAD
 	@Test
+=======
+	@BeforeTest
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
 	public void testsetup() {
 		WebDriver driver = new FirefoxDriver();	
 		driver.manage().window().maximize();
@@ -23,7 +27,13 @@ public class DownloadBtn {
 		driver.get("http://www.ishirqa.com");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    System.out.println("Login into the account");
+<<<<<<< HEAD
 	
+=======
+	}
+	@Test(priority = 1)
+	    public void Downloadbtn_Left() throws Exception {
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
 		System.out.println("Entering into DownloadFunctionality 1 method");		
 		driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();
 	    try {
@@ -82,6 +92,14 @@ public class DownloadBtn {
     Actualtext = driver.findElement(By.xpath("//div[@class='text-left green-bg']/h3")).getText();
  	Assert.assertEquals(Actualtext,"On Demand Software Testing");
 	}
+<<<<<<< HEAD
 
 	}
+=======
+	@AfterClass
+	public void tearDown() {
+		driver.quit();
+	}
+	}
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
 	

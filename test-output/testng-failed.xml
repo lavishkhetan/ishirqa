@@ -3,17 +3,22 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="testLogin.DownloadBtn"/>
+      <class name="testLogin.CompanyPage"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="testLogin.DownloadBtn">
+      <class name="testLogin.CompanyPage">
         <methods>
+<<<<<<< HEAD
           <include name="Downloadbtn_Left"/>
           <include name="testsetup"/>
+=======
+          <include name="ToolTip"/>
+          <include name="LaunchTheBeaseURL"/>
+>>>>>>> 7e7d43a8cee41ae1c57abaa31c40b94efe8a1b38
         </methods>
-      </class> <!-- testLogin.DownloadBtn -->
+      </class> <!-- testLogin.CompanyPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
