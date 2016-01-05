@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class DownloadBtn {
@@ -15,7 +13,7 @@ public class DownloadBtn {
 	public WebDriverWait wait;
 	public WebDriver driver=null;
 	
-	@BeforeTest
+	@Test
 
 	public void testsetup() {
 		WebDriver driver = new FirefoxDriver();	
@@ -24,10 +22,10 @@ public class DownloadBtn {
 		driver.get("http://www.ishirqa.com");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    System.out.println("Login into the account");
-	}
+	
 
-	@Test(priority = 1)
-	    public void Downloadbtn_Left() throws Exception {
+	
+//	    public void Downloadbtn_Left() throws Exception {
 
 		System.out.println("Entering into DownloadFunctionality 1 method");		
 		driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();
@@ -87,10 +85,7 @@ public class DownloadBtn {
     Actualtext = driver.findElement(By.xpath("//div[@class='text-left green-bg']/h3")).getText();
  	Assert.assertEquals(Actualtext,"On Demand Software Testing");
 	}
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
+
 }
 
 	

@@ -1,39 +1,36 @@
 package testLogin;
 
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageObjects.Login1;
 
 public class CompanyPage {
-WebDriver driver;
+public WebDriver driver;
 public WebDriverWait wait;
-	
-	@BeforeTest
-	public void LaunchTheBeaseURL() {
-		Login1.Browser(driver);
-	}
+String Actualtext;
 	@Test	
-	public void ToolTip(){
-	    
-//	    Actions actions = new Actions();
-//	    WebElement mainMenu = driver.findElement(By.linkText("menulink"));
-//	    actions.moveToElement(mainMenu);
-//
-//	    WebElement subMenu = driver.findElement(By.cssSelector("subLinklocator"));
-//	    actions.moveToElement(subMenu);
-//	    actions.click().build().perform();
+	public void ToolTip() throws Exception{
+		driver=new FirefoxDriver();
+		driver.manage().window().maximize();
+		wait = new WebDriverWait(driver, 5);
+		driver.get("http://ishirqa.com/");
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("Login into the account");
+		Thread.sleep(1000);
+		Actions action = new Actions(driver);
+		WebElement we = driver.findElement(By.xpath(".//*[@id='page-top']/nav/div/div/div[5]/ul/li[2]/a"));
+		action.moveToElement(we).moveToElement(driver.findElement(By.xpath(".//*[@id='page-top']/nav/div/div/div[5]/ul/li[2]/ul/li/a"))).click().build().perform();
+		System.out.println("Clicked on Why ISHIR QA?");
 
-		WebElement element = driver.findElement(By.cssSelector(".active>ul>li>a"));
-		// Get tooltip text
-		String toolTipText = element.getAttribute("title");
-		System.out.println("Tool tip text present :- " + toolTipText);
-
-		// Compare toll tip text
-		Assert.assertEquals("Why ISHIR QA?", toolTipText);
-}
+		Actualtext = driver.findElement(By.xpath("//h1[text()='Why ISHIR QA?']")).getText();
+     	Assert.assertEquals(Actualtext,"WHY ISHIR QA?");
+     	System.out.println("Why ISHIR QA? mouse hover functionality is working");
+	}
+	
 }
