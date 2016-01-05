@@ -1,46 +1,52 @@
 package testLogin;
 
 import java.util.Set;
-import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 public class HomePage {
-public WebDriverWait wait;
-public WebDriver driver;
-	
-//	    String element_xpath = ".//*[@id='ajaxLoadingModalPanelContainer'  and not(contains(@style,'display: none'))]";
-//	    WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 2, 0));
-//	    wait.Until(ExpectedConditions.ElementIsVisible(By.xpath(element_xpath));
-//	    element_xpath = ".//*[@id='ajaxLoadingModalPanelContainer' and contains(@style,'DISPLAY: none')]";
-//	    wait.Until(ExpectedConditions.ElementExists(By.xpath(element_xpath)));
-//	driver.switchTo(By.)
-//	}
-//}
 
-		 public void changeWindow(int i) {
-			  Set<String> windows = driver.switchTo();
+	public WebDriverWait wait;
+	public WebDriver driver;
+	int i;
+	@Test
+		 public void changeWindow() throws Exception {
+			 
+			 	driver=new FirefoxDriver();
+				driver.manage().window().maximize();
+				wait = new WebDriverWait(driver, 5);
+				driver.get("http://ishirqa.com/");
+				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				System.out.println("Login into the account");
+				
+			  Set<String> windows = driver.getWindowHandles();
 			  if (i > 0) {
-			   for (int j = 0; j < 5; j++) {
-			    if (windows.size() < 2) {
-			     try {
-			      Thread.sleep(2000);
-			     } catch (Exception ex) {
+			   for (int j = 0; j < 5; j++) 
+			   {
+			    if (windows.size() < 2) 
+			    {
+			     try 
+			     {
+			      Thread.sleep(2000);		      
+			     }
+			     catch (Exception ex) {
 			      ex.printStackTrace();
 			     }
 			    } else {
 			     break;
 			    }
 			   }
-			   windows = driver.switchTo();
+			   windows = driver.getWindowHandles();
 			  }
 			  String wins[] = windows.toArray(new String[windows.size()]);
 			  driver.switchTo().window(wins[i]);
 
 			  while (driver.getTitle().equalsIgnoreCase("about:blank")
 			    || driver.getTitle().equalsIgnoreCase("")) {
-			   wait.hardWait(2);
-			  }
+			   Thread.sleep(2000);
+			  }		  
 			 }
 }
