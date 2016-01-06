@@ -22,17 +22,12 @@ public class DownloadBtn {
 		driver.get("http://www.ishirqa.com");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    System.out.println("Login into the account");
-	
-
-	
-//	    public void Downloadbtn_Left() throws Exception {
 
 		System.out.println("Entering into DownloadFunctionality 1 method");		
 		driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();
 	    try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}  
 	    driver.findElement(By.xpath("//div[@class='row']//div[contains(@class,'col-lg-8')]//a")).click();
@@ -44,8 +39,7 @@ public class DownloadBtn {
 	    driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
 	    try {
 			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+		} catch (InterruptedException e) {		
 			e.printStackTrace();
 		}
 	    }
@@ -53,38 +47,25 @@ public class DownloadBtn {
 	    driver.switchTo().window(parentHandle);
 	    Actualtext = driver.findElement(By.xpath("//div[@class='text-left yello-bg']/h3")).getText();
      	Assert.assertEquals(Actualtext,"Software Testing for the leading Insurance Company");
-	    
-//	 }
-//	@Test(priority =2)
-//	public void Downloandbtn_Right(){
-//	System.out.println("Entering into DowloandFunctionality 2 Mehtod");
-//	driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();
-//    try {
-//		Thread.sleep(1000);
-//	} catch (InterruptedException e1) {
-//		// TODO Auto-generated catch block
-//		e1.printStackTrace();
-//	} 
      	
-    driver.findElement(By.xpath("//div[@class='row']//div[contains(@class,'col-lg-7')]//a")).click();
-    System.out.println("Download_Right button working");
+     	driver.findElement(By.xpath("//div[@class='row']//div[contains(@class,'col-lg-7')]//a")).click();
+     	System.out.println("Download_Right button working");
     
-    String parentHandle1 = driver.getWindowHandle(); // get the current window handle
-    for (String winHandle : driver.getWindowHandles())
-    {
-    driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
-    try {
+     	String parentHandle1 = driver.getWindowHandle(); // get the current window handle
+     	for (String winHandle : driver.getWindowHandles())
+     	{
+     	driver.switchTo().window(winHandle); // switch focus of WebDriver to the next found window handle (that's your newly opened window)
+     	try {
 		Thread.sleep(1000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
+     	} catch (InterruptedException e) {
 		e.printStackTrace();
-	}
-    }
-    driver.close(); // close newly opened window when done with it
-    driver.switchTo().window(parentHandle1);
-    Actualtext = driver.findElement(By.xpath("//div[@class='text-left green-bg']/h3")).getText();
- 	Assert.assertEquals(Actualtext,"On Demand Software Testing");
-	}
+     	}
+     	}
+     	driver.close(); // close newly opened window when done with it
+     	driver.switchTo().window(parentHandle1);
+     	Actualtext = driver.findElement(By.xpath("//div[@class='text-left green-bg']/h3")).getText();
+     	Assert.assertEquals(Actualtext,"On Demand Software Testing");
+		}
 
 }
 

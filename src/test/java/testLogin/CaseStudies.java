@@ -63,7 +63,7 @@ public class CaseStudies {
 	
 	@DataProvider(name="UserLogin")
 	public Object[][] loginData() {
-		Object[][] arrayObject = getExcelData("C:\\Users\\lkhetan\\workspace\\myMaven\\src\\test\\java\\testData\\DataFile.xls","Data");
+		Object[][] arrayObject = getExcelData("C:\\Users\\lkhetan\\workspace\\myMaven\\DataSets\\DataFile.xls","Data");
 		return arrayObject;
 	}
 

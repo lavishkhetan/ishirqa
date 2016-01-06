@@ -1,7 +1,8 @@
 package testLogin;
 
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,32 +22,57 @@ public class HomePage {
 				driver.get("http://ishirqa.com/");
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				System.out.println("Login into the account");
-				
-			  Set<String> windows = driver.getWindowHandles();
-			  if (i > 0) {
-			   for (int j = 0; j < 5; j++) 
-			   {
-			    if (windows.size() < 2) 
-			    {
-			     try 
-			     {
-			      Thread.sleep(2000);		      
-			     }
-			     catch (Exception ex) {
-			      ex.printStackTrace();
-			     }
-			    } else {
-			     break;
-			    }
-			   }
-			   windows = driver.getWindowHandles();
-			  }
-			  String wins[] = windows.toArray(new String[windows.size()]);
-			  driver.switchTo().window(wins[i]);
 
-			  while (driver.getTitle().equalsIgnoreCase("about:blank")
-			    || driver.getTitle().equalsIgnoreCase("")) {
-			   Thread.sleep(2000);
-			  }		  
-			 }
+					driver.findElement(By.xpath("//a[@href='https://web.facebook.com/ishirinc/']")).click();	
+				    System.out.println("navigated to fb");						    
+				    String parentHandle1 = driver.getWindowHandle(); // get the current window handle
+				    for (String winHandle : driver.getWindowHandles())
+				    {
+				    driver.switchTo().window(winHandle); 
+				    }
+				    Thread.sleep(1000);			    
+				    Assert.assertEquals("Security Check Required",driver.getTitle());
+				    driver.close(); // close newly opened window when done with it
+				    driver.switchTo().window(parentHandle1);
+				    Thread.sleep(1000);
+				    
+				    driver.findElement(By.xpath("//a[@href='https://twitter.com/ISHIR']")).click();
+				    System.out.println("navigated to twitter");		    
+				    String parentHandle2 = driver.getWindowHandle(); // get the current window handle
+				    for (String winHandle : driver.getWindowHandles())
+				    {
+				    driver.switchTo().window(winHandle); 
+				    }
+				    Thread.sleep(1000);
+				    Assert.assertEquals("ISHIR (@ISHIR) | Twitter",driver.getTitle());
+				    driver.close(); // close newly opened window when done with it
+				    driver.switchTo().window(parentHandle2);
+				    Thread.sleep(1000);
+				    
+				    driver.findElement(By.xpath("//a[@href=' https://www.linkedin.com/company/ishir-infotech?trk=top_nav_home']")).click();
+				    System.out.println("navigated to Linkedin");		    
+				    String parentHandle3 = driver.getWindowHandle(); // get the current window handle
+				    for (String winHandle : driver.getWindowHandles())
+				    {
+				    driver.switchTo().window(winHandle); 
+				    }
+				    Thread.sleep(1000);
+				    Assert.assertEquals("ISHIR | LinkedIn",driver.getTitle());
+				    driver.close(); // close newly opened window when done with it
+				    driver.switchTo().window(parentHandle3);
+				    Thread.sleep(1000);
+				    
+				    driver.findElement(By.xpath("//a[@href='https://plus.google.com/+Ishir']")).click();
+				    System.out.println("navigated to google+");		    
+				    String parentHandle4 = driver.getWindowHandle(); // get the current window handle
+				    for (String winHandle : driver.getWindowHandles())
+				    {
+				    driver.switchTo().window(winHandle); 
+				    }
+				    Thread.sleep(1000);
+				    Assert.assertEquals("ISHIR - Google+",driver.getTitle());
+				    driver.close(); // close newly opened window when done with it
+				    driver.switchTo().window(parentHandle4);
+				    
+	}
 }
