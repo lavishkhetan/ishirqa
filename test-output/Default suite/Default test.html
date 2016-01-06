@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 06 16:03:56 IST 2016</td>
+<td>Started on:</td><td>Wed Jan 06 18:36:26 IST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23737 ms)</td>
+<tr><td>Total time:</td><td>12 seconds (12457 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,20 +75,74 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testLogin.CaseStudies.VerifyDataEntry()'><b>VerifyDataEntry</b><br>Test class: testLogin.CaseStudies<br>Parameters: Name a, xyz@ishir.com, 98989898989, 201301, online retail, 5, Airbnb, abc.ishirqa.com, Nothing1</td>
+<td title='testLogin.DynamicPageHandle.dynamicPage()'><b>dynamicPage</b><br>Test class: testLogin.DynamicPageHandle</td>
 <td></td>
-<td>1</td>
-<td>testLogin.CaseStudies@59a6e353</td></tr>
+<td>12</td>
+<td>testLogin.DynamicPageHandle@6a5fc7f7</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='testLogin.CaseStudies.caseStudies()'><b>caseStudies</b><br>Test class: testLogin.CaseStudies</td>
-<td></td>
-<td>1</td>
-<td>testLogin.CaseStudies@59a6e353</td></tr>
-<tr>
-<td title='testLogin.CaseStudies.submitForm()'><b>submitForm</b><br>Test class: testLogin.CaseStudies</td>
-<td></td>
-<td>3</td>
-<td>testLogin.CaseStudies@59a6e353</td></tr>
+<td title='testLogin.DynamicPageHandle.clickLinkByHref()'><b>clickLinkByHref</b><br>Test class: testLogin.DynamicPageHandle</td>
+<td><div><pre>org.testng.TestNGException: 
+Method clickLinkByHref requires 2 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1274)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:989)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1079)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1003292107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1003292107'><pre>org.testng.TestNGException: 
+Method clickLinkByHref requires 2 parameters but 0 were supplied in the @Test annotation.
+	at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:191)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:127)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:376)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1274)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:989)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1079)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+</pre></div></td>
+<td>0</td>
+<td>testLogin.DynamicPageHandle@6a5fc7f7</td></tr>
 </table><p>
 </body>
 </html>
