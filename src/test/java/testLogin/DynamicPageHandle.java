@@ -27,7 +27,7 @@ public class DynamicPageHandle {
 	}
 	@Test(priority=2)
 		public void clickLinkByHref(String data, int position) {
-		    List<WebElement> anchors = driver.findElements(By.partialLinkText(".//*[@id='myCarousel']/div[1]/ol/li[1]"));
+		    List<WebElement> anchors = driver.findElements(By.partialLinkText("data-slide-to"));
 		    Iterator<WebElement> i = anchors.iterator();
 //		    driver.manage().timeouts().pageLoadTimeout(5, TimeUnit.SECONDS);
 	        driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
@@ -44,8 +44,10 @@ public class DynamicPageHandle {
 		         anchor.click();
 		         break;
 		     }
+		 	
 		    }
 		}
+
 //			try{
 //		      driver.get("http://ishirqa.com/");
 //		      (new WebDriverWait(driver, 10/*sec*/)).until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='myCarousel']/div[1]/ol/li[1]")));
