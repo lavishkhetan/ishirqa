@@ -26,9 +26,9 @@ public class ClientsPage {
 	JavascriptExecutor jse = (JavascriptExecutor)driver;
 	jse.executeScript("window.scrollBy(0,3000)", "");
 	Thread.sleep(1000);
+
 	WebElement image1 = driver.findElement(By.xpath(".//*[@id='owl-demo']/div/div/div[4]/div/img"));  
 	System.out.println("Entering the loop");
-	Thread.sleep(1000);
 	Boolean imageLoaded1 = (Boolean)((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != undefined && arguments[0].naturalWidth > 0", image1); 
 	if (!imageLoaded1) 
 	{ 

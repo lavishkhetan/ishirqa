@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="testLogin.DynamicPageHandle"/>
+      <class name="testLogin.HomePage"/>
     </classes>
   </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="testLogin.DynamicPageHandle">
+      <class name="testLogin.HomePage">
         <methods>
-          <include name="clickLinkByHref"/>
+          <include name="changeWindow"/>
         </methods>
-      </class> <!-- testLogin.DynamicPageHandle -->
+      </class> <!-- testLogin.HomePage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
