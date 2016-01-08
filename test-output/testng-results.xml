@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[User has succesfully verified the broken image]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44135" started-at="2016-01-07T12:06:01Z" finished-at="2016-01-07T12:06:45Z">
+  <suite name="Default suite" duration-ms="12710" started-at="2016-01-08T13:18:21Z" finished-at="2016-01-08T13:18:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44135" started-at="2016-01-07T12:06:01Z" finished-at="2016-01-07T12:06:45Z">
-      <class name="testLogin.HomePage">
-        <test-method status="PASS" signature="changeWindow()[pri:0, instance:testLogin.HomePage@6a5fc7f7]" name="changeWindow" duration-ms="44114" started-at="2016-01-07T17:36:01Z" finished-at="2016-01-07T17:36:45Z">
+    <test name="Default test" duration-ms="12710" started-at="2016-01-08T13:18:21Z" finished-at="2016-01-08T13:18:34Z">
+      <class name="testLogin.ClientsPage">
+        <test-method status="PASS" signature="LaunchURL()[pri:0, instance:testLogin.ClientsPage@35f983a6]" name="LaunchURL" duration-ms="12696" started-at="2016-01-08T18:48:21Z" finished-at="2016-01-08T18:48:34Z">
           <reporter-output>
+            <line>
+              <![CDATA[User has succesfully verified the broken image]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- changeWindow -->
-      </class> <!-- testLogin.HomePage -->
+        </test-method> <!-- LaunchURL -->
+      </class> <!-- testLogin.ClientsPage -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

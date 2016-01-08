@@ -58,6 +58,6 @@ public class DynamicPageHandle {
 		Actualtext = driver.findElement(By.xpath("(//div[@class='homepageslider']//h5/span[1])[2]")).getText();
      	Assert.assertEquals(Actualtext,"SOFTWARE TESTING TEAM");
      	System.out.println("4th button of homepageslider is working");
-     	  
+     	driver.quit();  
 	}
 }

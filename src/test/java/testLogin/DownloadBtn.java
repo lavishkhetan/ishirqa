@@ -22,15 +22,15 @@ public class DownloadBtn {
 		driver.get("http://www.ishirqa.com");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	    System.out.println("Login into the account");
-
+	 
 		System.out.println("Entering into DownloadFunctionality 1 method");		
-		driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();
+		driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[5]")).click();	
 	    try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}  
-	    driver.findElement(By.xpath("//div[@class='row']//div[contains(@class,'col-lg-8')]//a")).click();
+	    driver.findElement(By.xpath("//div[@class='row']//div[contains(@class,'col-lg-8')]//a")).click(); 
 	    System.out.println("Download_Left button working");
 	    
 	    String parentHandle = driver.getWindowHandle(); // get the current window handle
@@ -65,7 +65,8 @@ public class DownloadBtn {
      	driver.switchTo().window(parentHandle1);
      	Actualtext = driver.findElement(By.xpath("//div[@class='text-left green-bg']/h3")).getText();
      	Assert.assertEquals(Actualtext,"On Demand Software Testing");
-		}
+		
+	driver.quit();}
 
 }
 

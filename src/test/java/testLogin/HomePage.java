@@ -13,6 +13,7 @@ public class HomePage {
 	public WebDriverWait wait;
 	public WebDriver driver;
 	int i;
+	String Actualtext;
 	@Test
 		 public void changeWindow() throws Exception {
 			 
@@ -57,6 +58,8 @@ public class HomePage {
 				    driver.switchTo().window(winHandle); 
 				    }
 				    Thread.sleep(1000);
+				    Actualtext = driver.findElement(By.xpath("//div[@class='join-linkedin-promo']/h3")).getText();
+			     	Assert.assertEquals(Actualtext,"Keep up with ISHIR");
 //				    Assert.assertEquals("ISHIR | LinkedIn",driver.getTitle());
 				    driver.close(); // close newly opened window when done with it
 				    driver.switchTo().window(parentHandle3);
