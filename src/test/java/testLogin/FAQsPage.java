@@ -35,5 +35,6 @@ public class FAQsPage {
 		
 		Actualtext = driver.findElement(By.xpath("//div[@class='row']//h1[text()='Frequently Asked Questions ']")).getText();
      	Assert.assertEquals(Actualtext,"FREQUENTLY ASKED QUESTIONS (FAQs)");
+     	driver.quit();
 	}
 }

@@ -3,7 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="Test">
     <classes>
-      <class name="testLogin.LoginPage"/>
+      <class name="testLogin.CaseStudies"/>
+      <class name="testLogin.ClientsPage"/>
+      <class name="testLogin.CompanyPage"/>
+      <class name="testLogin.LetsTalk"/>
+      <class name="testLogin.HomePage"/>
+      <class name="testLogin.DownloadBtn"/>
+      <class name="testLogin.DynamicPageHandle"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->

@@ -19,5 +19,6 @@ WebDriver driver;
 		
 		Actualtext = driver.findElement(By.xpath("//div[@class='static-banner']//h3[1]")).getText();
      	Assert.assertEquals(Actualtext,"Software Testing");
+     	driver.quit();
 }
 }

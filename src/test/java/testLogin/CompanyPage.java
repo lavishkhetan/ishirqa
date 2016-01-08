@@ -31,6 +31,7 @@ String Actualtext;
 		Actualtext = driver.findElement(By.xpath("//h1[text()='Why ISHIR QA?']")).getText();
      	Assert.assertEquals(Actualtext,"WHY ISHIR QA?");
      	System.out.println("Why ISHIR QA? mouse hover functionality is working");
+     	driver.quit();
 	}
 	
 }

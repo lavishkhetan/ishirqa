@@ -12,6 +12,7 @@ String Actualtext;
 		driver.findElement(By.xpath(".//*[@id='page-top']/nav/div/div/div[4]/ul/li[4]/a")).click();
 		Actualtext = driver.findElement(By.xpath(".//*[@id='services']/div/div/div/h1")).getText();
      	Assert.assertEquals(Actualtext,"services");
+     	driver.quit();
 	}
 }
 

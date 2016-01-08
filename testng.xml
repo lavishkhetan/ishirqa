@@ -3,8 +3,16 @@
 <suite name="Suite" >
   <test name="Test">
     <classes>
-      <class name="testLogin.LoginPage"/>
-      <class name="testLogin.CaseStudies"/>
+<class name ="testLogin.CaseStudies"></class>
+	<class name ="testLogin.ClientsPage"></class>
+		<class name ="testLogin.CompanyPage"></class>
+			<class name ="testLogin.LetsTalk"></class>
+				<class name ="testLogin.HomePage"></class>
+					<class name ="testLogin.DownloadBtn"></class>
+      					<class name ="testLogin.ServicesPage"></class>
+      						<class name ="testLogin.PricingPage"></class>
+      							<class name ="testLogin.FAQsPage"></class>
+     								 <class name ="testLogin.DynamicPageHandle"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

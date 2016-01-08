@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
     <line>
       <![CDATA[User has succesfully verified the broken image]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12710" started-at="2016-01-08T13:18:21Z" finished-at="2016-01-08T13:18:34Z">
+  <suite name="Suite" duration-ms="152962" started-at="2016-01-08T13:31:05Z" finished-at="2016-01-08T13:33:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12710" started-at="2016-01-08T13:18:21Z" finished-at="2016-01-08T13:18:34Z">
+    <test name="Test" duration-ms="152962" started-at="2016-01-08T13:31:05Z" finished-at="2016-01-08T13:33:38Z">
+      <class name="testLogin.DynamicPageHandle">
+        <test-method status="PASS" signature="dynamicPage()[pri:0, instance:testLogin.DynamicPageHandle@783e6358]" name="dynamicPage" duration-ms="12184" started-at="2016-01-08T19:03:19Z" finished-at="2016-01-08T19:03:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dynamicPage -->
+        <test-method status="PASS" signature="dynamicPanel()[pri:0, instance:testLogin.DynamicPageHandle@783e6358]" name="dynamicPanel" duration-ms="6128" started-at="2016-01-08T19:03:31Z" finished-at="2016-01-08T19:03:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dynamicPanel -->
+      </class> <!-- testLogin.DynamicPageHandle -->
+      <class name="testLogin.LetsTalk">
+        <test-method status="PASS" signature="Browser()[pri:0, instance:testLogin.LetsTalk@26ba2a48]" name="Browser" is-config="true" duration-ms="10827" started-at="2016-01-08T19:01:05Z" finished-at="2016-01-08T19:01:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Browser -->
+        <test-method status="PASS" signature="Dashboard()[pri:0, instance:testLogin.LetsTalk@26ba2a48]" name="Dashboard" duration-ms="86" started-at="2016-01-08T19:02:12Z" finished-at="2016-01-08T19:02:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Dashboard -->
+        <test-method status="PASS" signature="ScrollPageDown()[pri:1, instance:testLogin.LetsTalk@26ba2a48]" name="ScrollPageDown" duration-ms="51" started-at="2016-01-08T19:02:12Z" finished-at="2016-01-08T19:02:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ScrollPageDown -->
+        <test-method status="PASS" signature="FormField()[pri:2, instance:testLogin.LetsTalk@26ba2a48]" name="FormField" duration-ms="4577" started-at="2016-01-08T19:02:12Z" finished-at="2016-01-08T19:02:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FormField -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testLogin.LetsTalk@26ba2a48]" name="afterTest" is-config="true" duration-ms="303" started-at="2016-01-08T19:03:37Z" finished-at="2016-01-08T19:03:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- testLogin.LetsTalk -->
+      <class name="testLogin.DownloadBtn">
+        <test-method status="PASS" signature="testsetup()[pri:0, instance:testLogin.DownloadBtn@4e04a765]" name="testsetup" duration-ms="18459" started-at="2016-01-08T19:03:00Z" finished-at="2016-01-08T19:03:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testsetup -->
+      </class> <!-- testLogin.DownloadBtn -->
+      <class name="testLogin.CompanyPage">
+        <test-method status="PASS" signature="ToolTip()[pri:0, instance:testLogin.CompanyPage@64616ca2]" name="ToolTip" duration-ms="23036" started-at="2016-01-08T19:01:49Z" finished-at="2016-01-08T19:02:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ToolTip -->
+      </class> <!-- testLogin.CompanyPage -->
       <class name="testLogin.ClientsPage">
-        <test-method status="PASS" signature="LaunchURL()[pri:0, instance:testLogin.ClientsPage@35f983a6]" name="LaunchURL" duration-ms="12696" started-at="2016-01-08T18:48:21Z" finished-at="2016-01-08T18:48:34Z">
+        <test-method status="PASS" signature="LaunchURL()[pri:0, instance:testLogin.ClientsPage@3b81a1bc]" name="LaunchURL" duration-ms="12240" started-at="2016-01-08T19:01:36Z" finished-at="2016-01-08T19:01:49Z">
           <reporter-output>
             <line>
               <![CDATA[User has succesfully verified the broken image]]>
@@ -18,6 +62,81 @@
           </reporter-output>
         </test-method> <!-- LaunchURL -->
       </class> <!-- testLogin.ClientsPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testLogin.CaseStudies">
+        <test-method status="PASS" signature="testSetup()[pri:0, instance:testLogin.CaseStudies@5f2050f6]" name="testSetup" is-config="true" duration-ms="11632" started-at="2016-01-08T19:01:15Z" finished-at="2016-01-08T19:01:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetup -->
+        <test-method status="PASS" signature="caseStudies()[pri:1, instance:testLogin.CaseStudies@5f2050f6]" name="caseStudies" duration-ms="1618" started-at="2016-01-08T19:01:27Z" finished-at="2016-01-08T19:01:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- caseStudies -->
+        <test-method status="PASS" signature="VerifyDataEntry(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:testLogin.CaseStudies@5f2050f6]" name="VerifyDataEntry" duration-ms="1816" started-at="2016-01-08T19:01:29Z" data-provider="UserLogin" finished-at="2016-01-08T19:01:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Name a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[xyz@ishir.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[98989898989]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[201301]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[online retail]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Airbnb]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[abc.ishirqa.com]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Nothing1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyDataEntry -->
+        <test-method status="PASS" signature="submitForm()[pri:3, instance:testLogin.CaseStudies@5f2050f6]" name="submitForm" duration-ms="5166" started-at="2016-01-08T19:01:31Z" finished-at="2016-01-08T19:01:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- submitForm -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testLogin.CaseStudies@5f2050f6]" name="tearDown" is-config="true" duration-ms="451" started-at="2016-01-08T19:01:36Z" finished-at="2016-01-08T19:01:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testLogin.CaseStudies -->
+      <class name="testLogin.HomePage">
+        <test-method status="PASS" signature="changeWindow()[pri:0, instance:testLogin.HomePage@13fee20c]" name="changeWindow" duration-ms="44126" started-at="2016-01-08T19:02:16Z" finished-at="2016-01-08T19:03:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeWindow -->
+      </class> <!-- testLogin.HomePage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

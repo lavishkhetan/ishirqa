@@ -76,6 +76,6 @@ public class HomePage {
 				    Assert.assertEquals("ISHIR - Google+",driver.getTitle());
 				    driver.close(); // close newly opened window when done with it
 				    driver.switchTo().window(parentHandle4);
-				    
+				    driver.quit();
 	}
 }
