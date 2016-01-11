@@ -9,7 +9,40 @@
       <class name="testLogin.LetsTalk"/>
       <class name="testLogin.HomePage"/>
       <class name="testLogin.DownloadBtn"/>
+      <class name="testLogin.ServicesPage"/>
+      <class name="testLogin.PricingPage"/>
+      <class name="testLogin.FAQsPage"/>
       <class name="testLogin.DynamicPageHandle"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="testLogin.LetsTalk">
+        <methods>
+          <include name="Dashboard"/>
+          <include name="Browser"/>
+          <include name="FormField"/>
+          <include name="afterTest"/>
+          <include name="ScrollPageDown"/>
+        </methods>
+      </class> <!-- testLogin.LetsTalk -->
+      <class name="testLogin.CaseStudies">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testSetup"/>
+        </methods>
+      </class> <!-- testLogin.CaseStudies -->
+      <class name="testLogin.DownloadBtn">
+        <methods>
+          <include name="testsetup"/>
+        </methods>
+      </class> <!-- testLogin.DownloadBtn -->
+      <class name="testLogin.DynamicPageHandle">
+        <methods>
+          <include name="dynamicPanel"/>
+          <include name="dynamicPage"/>
+        </methods>
+      </class> <!-- testLogin.DynamicPageHandle -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
